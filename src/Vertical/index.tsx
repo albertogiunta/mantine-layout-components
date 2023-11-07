@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
 import { Stack, StackProps } from '@mantine/core';
-import { commonProps, CommonProps } from '../commonProps';
+import { forwardRef } from 'react';
+import { CommonProps, commonProps } from '../commonProps';
 import { ReactFC } from '../types';
 
 export let centerVerticalProps = {
@@ -25,7 +25,7 @@ export const Vertical: ReactFC<VerticalProps> = forwardRef<any, VerticalProps>(
       noWrap,
       scrollable,
       spaceBetween,
-      sx,
+      style,
       sxArray = [],
       ...rest
     } = props;
@@ -38,11 +38,11 @@ export const Vertical: ReactFC<VerticalProps> = forwardRef<any, VerticalProps>(
       }),
     };
     //todo: TS fix
-    let sx1 = [st, sx, ...sxArray] as any;
+    let style1 = [st, style, ...sxArray] as any;
     return (
       <Stack
         ref={ref}
-        sx={sx1}
+        style={style1}
         {...(centerV && {
           align: 'center',
         })}
