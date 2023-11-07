@@ -19,7 +19,7 @@
     "build": "dts build",
     "build-storybook": "storybook build",
     "lint": "dts lint .",
-    "prepare": "dts build && husky install",
+    "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
